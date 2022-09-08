@@ -23,13 +23,13 @@ body {
 h1 {
     font-family: 'Fira Sans', sans-serif;
     font-size: 3em;
-    margin: 2em 1rem;
+    margin: 10em 5rem;
 }
 
 @media only screen and (min-width: 35em){
     h1 {
         font-size: 7em;
-        margin: 2em 4rem 1em;
+        margin: 4em 8rem 1em; /*margin: 4em 8rem 1em;*/
     }
 }
 
@@ -51,8 +51,9 @@ main {
 }
 
 .main-hero {
-    min-height: 40vh;
+    min-height: 80vh;
     padding-top: 3em;
+    
 }
 
 section {
@@ -228,3 +229,7 @@ section.your-active-class .landing__container::after {
 
 /* My CSS Implementation */
 
+html
+{
+    scroll-behavior: smooth;
+}
