@@ -23,7 +23,7 @@ body {
 h1 {
     font-family: 'Fira Sans', sans-serif;
     font-size: 3em;
-    margin: 10em 5rem;
+    margin: 4em 5rem;
 }
 
 @media only screen and (min-width: 35em){
@@ -73,8 +73,8 @@ section {
 
 .navbar__menu li {
     display: inline-block;
-    color:#000;
-    background-color: #cc1;
+    color:rgb(12, 214, 218);
+    /* background-color: rgb(43, 12, 12); */
     padding: 1em;
     margin: 1em;
 }
@@ -84,7 +84,8 @@ section {
     padding: 1em;
     font-weight: bold;
     text-decoration: none;
-    color: #000;
+    color: rgb(12, 221, 228);
+    border-radius: 15px;
 }
 
 .navbar__menu .menu__link:hover {
@@ -201,6 +202,19 @@ section:nth-of-type(3n + 1) .landing__container::after {
 section.your-active-class {
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    animation: highlight-section 0.3s ease-in forwards;
+}
+
+@keyframes highlight-section {
+    0%{
+        border: solid grey 0px;
+        scale: 1;
+    }
+
+    100%{
+        border: solid grey 2px;
+        scale: 1.01;
+    }
 }
 
 section.your-active-class .landing__container::before {
@@ -232,4 +246,34 @@ section.your-active-class .landing__container::after {
 html
 {
     scroll-behavior: smooth;
+}
+
+#navbar__list
+{
+    background-color: rgb(37, 34, 34);
+}
+
+#active-sec
+{
+    /* background-color: rgb(167, 0, 0); */
+    animation: stylize-anim 0.4s ease-in-out forwards;
+    border-radius: 15px;
+}
+
+@keyframes stylize-anim {
+
+    0% {
+        background-color: aqua;
+    }
+    
+    100%{
+        background-color: red;
+    }
+}
+
+#sub-btn
+{
+    border-radius: 20px;
+    color: aqua;
+    background-color: #333;
 }
