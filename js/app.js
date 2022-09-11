@@ -70,12 +70,12 @@ for (let i = 1; i <= sections.length; i++)
 
 
 function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
+    
     return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        element.top >= 0 &&
+        element.left >= 0 &&
+        element.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        element.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
 
@@ -169,14 +169,20 @@ function trackScroll(event)
     for (let i = 0; i < sections.length; i++)
     {
         const section = sections[i];
-        console.log(navbarList.childNodes);
+        //console.log(navbarList.childNodes);
         const rect = section.getBoundingClientRect();
         const inViewport = isInViewport(section);
         // const thisOne = sectionList[i];
-        if (rect.top > 0 && rect.bottom < window.innerHeight)
+        // if (rect.top  > 0 && rect.bottom <= window.innerHeight) //(rect.top  > 0 && rect.bottom < window.innerHeight)
+        // {
+        //     navContainer[i + 2].id = 'active-sec';
+        //     section.classList.add('your-active-class');
+        // }
+         if (rect.top < 100 && rect.height > rect.height - rect.bottom - rect.top )//&& rect.bottom < window.innerHeight + (rect.height - rect.top) ) //(rect.top  > 0 && rect.bottom < window.innerHeight)
         {
             navContainer[i + 2].id = 'active-sec';
             section.classList.add('your-active-class');
+            console.log('rect top is: ' + rect.top + 'rect height is :' + rect.height);
         }
         else
         {
@@ -188,7 +194,7 @@ function trackScroll(event)
         //console.log('Section is:' + ' ' + sectionList);
     }
 
-    console.log('Scrolling');
+    //console.log('Scrolling');
 }
 
 
