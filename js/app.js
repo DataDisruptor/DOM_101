@@ -109,7 +109,7 @@ function trackScroll(event)
     // console.log(section_01.style.opacity);
     // // LAST EDITED  // LAST EDITED  // LAST EDITED  // LAST EDITED  // LAST EDITED
 
-    if (Sec1.y <= 50 && Sec1.bottom >= 0)
+    if (Sec1.y <= 500 && Sec1.bottom >= 500)
     {
         console.log('Section 1 is zero!');
         console.log(Sec1);
@@ -126,7 +126,7 @@ function trackScroll(event)
             nav_sec4.id='';
         }
     }
-    else if (Sec2.y <= 50 && Sec2.bottom >= 0)
+    else if (Sec2.y <= 500 && Sec2.bottom >= 500)
     {
         console.log('Section 2 is zero!');
         console.log(Sec2);
@@ -143,7 +143,7 @@ function trackScroll(event)
             nav_sec4.id='';
         }
     }
-    else if (Sec3.y <= 50 && Sec3.bottom >= 0)
+    else if (Sec3.y <= 500 && Sec3.bottom >= 500)
     {
         console.log('Section 3 is zero!');
         console.log(Sec3);
@@ -160,7 +160,7 @@ function trackScroll(event)
             nav_sec4.id='';
         }
     }
-    else if (Sec4.y <= 50 && Sec4.bottom >= 0)
+    else if (Sec4.y <= 500 && Sec4.bottom >= 500)
     {
         console.log('Section 4 is zero!');
         console.log(Sec4);
@@ -177,6 +177,7 @@ function trackScroll(event)
             nav_sec1.id='';
         }
     }
+    
     
     console.log('section 1 Y:' + Sec1.y + ', Section 1 Bottom:' + Sec1.bottom);
     //console.log(window.innerHeight + ',' + window.outerHeight);

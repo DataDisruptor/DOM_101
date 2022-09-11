@@ -11,12 +11,16 @@
 
 /* ---- Base Rules ---- */
 body {
-    background: rgb(136,203,171);
-    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
+    /* background: rgb(136,203,171); */
+    
+    background: linear-gradient(0deg, rgb(0, 9, 136) 0%, rgb(0, 75, 27) 25%, rgb(75, 0, 0) 50%, rgb(0, 25, 75) 100%, rgba(49, 0, 129) 75%);
     margin: 0;
     font-family: 'Merriweather', serif;
     color: #fff;
+    animation: color-page 5s ease-in-out alternate;
 }
+
+
 
 
 /* Typography General*/
@@ -59,6 +63,7 @@ main {
 section {
     position: relative;
     min-height: 80vh;
+    border-radius: 25px;
 }
 
 
@@ -202,7 +207,7 @@ section:nth-of-type(3n + 1) .landing__container::after {
 section.your-active-class {
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
-    animation: highlight-section 0.3s ease-in forwards;
+    animation: highlight-section 0.4s ease-in forwards;
 }
 
 @keyframes highlight-section {
@@ -235,9 +240,9 @@ section.your-active-class .landing__container::after {
 		           rotate(0deg);
 	}
 	to {
-		transform: rotate(360deg)
+		transform: rotate(180deg)
 		           translate(-1em) 
-		           rotate(-360deg);
+		           rotate(-180deg);
 	}
 }
 
