@@ -1,13 +1,17 @@
-# Landing Page Project
+# Adam Ocheri - Landing Page Project
 
 ## Table of Contents
 
 * [Instructions](#instructions)
+* [Description](#description)
 
-## Instructions
+### Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+`This webpage uses uses javascript smooth scrolling, section highlighting, and a form submission.`
+It portrays a game app description for potential crowds.
 
-To get started, open `js/app.js` and start building out the app's functionality
+### Description
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+The 4 main sections of this webpage are:
+`Lore, Conflict, Climax, and Mechanics`
+These aim to present to reader with the interesting ideas brought about by the game alongside with some basic mechanical concepts, while still preserving a sense of mystery around these,

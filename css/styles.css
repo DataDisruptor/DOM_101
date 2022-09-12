@@ -13,7 +13,8 @@
 body {
     /* background: rgb(136,203,171); */
     
-    background: linear-gradient(0deg, rgb(0, 9, 136) 0%, rgb(0, 75, 27) 25%, rgb(75, 0, 0) 50%, rgb(0, 25, 75) 100%, rgba(49, 0, 129) 75%);
+    /* background: linear-gradient(0deg, rgb(0, 9, 136) 0%, rgb(0, 75, 27) 25%, rgb(75, 0, 0) 50%, rgb(0, 25, 75) 100%, rgba(49, 0, 129) 75%); */
+    background-image: url("../images/ChamferPiano_Render_029.jpg");
     margin: 0;
     font-family: 'Merriweather', serif;
     color: #fff;
@@ -28,6 +29,16 @@ h1 {
     font-family: 'Fira Sans', sans-serif;
     font-size: 3em;
     margin: 4em 5rem;
+    text-align: center;
+    color: rgb(0, 225, 255);
+}
+
+h4 {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.5em;
+    padding-top: 30vh;
+    
+    /* min-height: 80vh; */
 }
 
 @media only screen and (min-width: 35em){
@@ -35,6 +46,13 @@ h1 {
         font-size: 7em;
         margin: 4em 8rem 1em; /*margin: 4em 8rem 1em;*/
     }
+    
+}
+@media only screen and (min-width: 35em){
+    h2{
+        font-size: 1.5em;
+    }
+
 }
 
 h2 {
@@ -52,10 +70,11 @@ p {
 /* ---- Layout Rules ---- */
 main {
     margin: 10vh 1em 10vh;
+    
 }
 
 .main-hero {
-    min-height: 80vh;
+    min-height: 40vh;
     padding-top: 3em;
     
 }
@@ -249,10 +268,7 @@ section.your-active-class .landing__container::after {
 
 /* My CSS Implementation */
 
-/* html
-{
-    scroll-behavior: smooth;
-} */
+
 
 #navbar__list
 {
@@ -287,4 +303,9 @@ section.your-active-class .landing__container::after {
 #mon-form
 {
     justify-self: center;
+}
+
+.signup
+{
+    margin: 10vh;
 }
