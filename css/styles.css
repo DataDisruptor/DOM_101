@@ -249,10 +249,10 @@ section.your-active-class .landing__container::after {
 
 /* My CSS Implementation */
 
-html
+/* html
 {
     scroll-behavior: smooth;
-}
+} */
 
 #navbar__list
 {
@@ -282,4 +282,9 @@ html
     border-radius: 20px;
     color: aqua;
     background-color: #333;
+}
+
+#mon-form
+{
+    justify-self: center;
 }

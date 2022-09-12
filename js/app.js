@@ -32,6 +32,7 @@ for (let i = 1; i <= sections.length; i++)
     nav_link.classList.add('menu__link')
     nav_link.textContent = 'Section' + ' ' + i;
     nav_link.setAttribute('href', '#section' + i);
+    nav_link.dataset.nav = 'Section ' + i;
     nav_sec.appendChild(nav_link);
     navbarList.appendChild(nav_sec);
 }
@@ -178,7 +179,7 @@ function trackScroll(event)
         //     navContainer[i + 2].id = 'active-sec';
         //     section.classList.add('your-active-class');
         // }
-         if (rect.top < 100 && rect.height > rect.height - rect.bottom - rect.top )//&& rect.bottom < window.innerHeight + (rect.height - rect.top) ) //(rect.top  > 0 && rect.bottom < window.innerHeight)
+         if (rect.top < 200 && rect.height > rect.height - rect.bottom - rect.top )//&& rect.bottom < window.innerHeight + (rect.height - rect.top) ) //(rect.top  > 0 && rect.bottom < window.innerHeight)
         {
             navContainer[i + 2].id = 'active-sec';
             section.classList.add('your-active-class');
@@ -197,31 +198,48 @@ function trackScroll(event)
     //console.log('Scrolling');
 }
 
+function jumpToSection (e)
+{
+    if (e.target.nodeName == 'A')
+    {
+        e.preventDefault();
+        console.log(e.target);
+        for (let section of sections)
+        {
+            if (section.dataset.nav == e.target.dataset.nav)
+            {
+                section.scrollIntoView({behavior: "smooth", block: "start"});
+            }
+        }
+    }
+}
 
-// build the nav
+navbarList.addEventListener('click', jumpToSection);
+
+
 
 
 window.addEventListener('scroll', trackScroll);
 
 
+const myForm = document.querySelector('#mon-form');
+function onFormSubmit(e)
+{
+    if (e.target.nodeName == 'BUTTON')
+    {
+        e.preventDefault();
+        //window.alert("WTF are you doing with your life?");
+        if (document.forms["monForm"]["full-name"].value == "" || !(document.forms["monForm"]["email"].value.includes("@") && document.forms["monForm"]["email"].value.includes(".")))
+        {
+            window.alert("Please fill in your real name and a valid email address");
+        }
+        else{
+            window.alert("Sign up is now COMPLETE! Thank You");
+        }
+    }
+    
+}
 
-
-// Add class 'active' to section when near top of viewport
-
-
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
+myForm.addEventListener('click', onFormSubmit);
 
 
