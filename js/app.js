@@ -38,6 +38,9 @@ for (let i = 1; i <= sections.length; i++)
     {
         nav_link.textContent = 'Mechanics';
     }
+    else{
+        nav_link.textContent = 'Section' + i;
+    }
 }
 
 const navContainer = document.querySelectorAll('.navbar__menu');
